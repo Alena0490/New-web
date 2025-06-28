@@ -1,0 +1,72 @@
+# Chybové stránky
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
+
+# Zapnutí mod_rewrite
+RewriteEngine On
+
+# Přesměrování z www na non-www
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteCond %{REQUEST_URI} !^/mailer.php$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Přesměrování HTTP na HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Přesměrování z /index/ na /
+RewriteRule ^index/$ / [R=301,L]
+
+# Přesměrování z /index.html nebo /index.php na /
+RewriteCond %{THE_REQUEST} /index\.(html|php) [NC]
+RewriteRule ^index\.(html|php)$ / [R=301,L]
+
+# Nastavení výchozí stránky
+DirectoryIndex index.html
+
+# Načítání souborů bez přípon
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)/$ $1.html [L]
+
+# Podpora pro složky jako `/projects/khora/`
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*)/$ $1/index.html [L]
+
+# Pravidlo pro stránku /kontakt/
+RewriteRule ^kontakt/?$ kontakt.php [L]
+
+# Přidání lomítka na konec URL (pokud tam není)
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+# Odstranění koncovek .php a .html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# Načtení odpovídajícího souboru při zadání URL bez přípony
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)$ $1.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
+
+# Speciální pravidla pro kontakty a kontaktní formulář
+RewriteRule ^kontakty/?$ /kontakty.php [L]
+RewriteRule ^kontaktni-formular/?$ /kontaktni-formular.php [L]
+
+# Zamezení zobrazování obsahu složky
+Options -Indexes
+
