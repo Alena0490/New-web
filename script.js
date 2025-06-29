@@ -102,35 +102,28 @@ document.addEventListener('DOMContentLoaded', function () {
 /*** Change Hamburger to Cross vice versa */
 document.addEventListener("DOMContentLoaded", function () {
     const burgerIcon = document.querySelector('.jq--nav-icon');
-    const navItems = document.querySelectorAll('.first');
-    const navBackground = document.querySelector('.mobile-nav-back');
-  
-    if (burgerIcon) {
-      burgerIcon.addEventListener('click', function (event) {
-        event.preventDefault();
-  
-        // Přepni obrázek
-        const currentSrc = burgerIcon.getAttribute('src');
-        const isBurger = currentSrc.includes('burger-barw.png');
-  
-        burgerIcon.setAttribute('src', isBurger ? 'img/closew.png' : 'img/burger-barw.png');
-  
-        // Přepnutí viditelnosti mobilního menu (fade efekt)
-        navItems.forEach(el => {
-          el.style.transition = 'opacity 0.5s';
-          el.style.opacity = el.style.opacity === '1' ? '0' : '1';
-          el.style.display = el.style.opacity === '0' ? 'none' : 'block';
+    const navMenu = document.getElementById('navMenu');
+
+    console.log("JS načten. burgerIcon:", burgerIcon, "| navMenu:", navMenu);
+
+    if (burgerIcon && navMenu) {
+        burgerIcon.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            // Přepni obrázek burger ↔ close
+            const currentSrc = burgerIcon.getAttribute('src');
+            const isBurger = currentSrc.includes('burger-barw.png');
+            burgerIcon.setAttribute('src', isBurger ? 'img/closew.png' : 'img/burger-barw.png');
+
+            // Přepni třídu .nav
+            navMenu.classList.toggle('nav');
+            console.log("Klik - aktuální třídy na <ul>:", navMenu.className);
         });
-  
-        if (navBackground) {
-          navBackground.style.transition = 'opacity 0.5s';
-          const isVisible = navBackground.style.display === 'block';
-          navBackground.style.opacity = isVisible ? '0' : '1';
-          navBackground.style.display = isVisible ? 'none' : 'block';
-        }
-      });
+    } else {
+        console.warn("burgerIcon nebo navMenu nenalezen!");
     }
-  });
+});
+
 
 
   /****Slider animace */
