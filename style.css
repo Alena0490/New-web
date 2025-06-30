@@ -17,6 +17,7 @@
 
   --background: #f5f5f580;
   --background-soft: rgba(255, 255, 255, 0.63);
+  --background-soft-full: rgba(240, 240, 240);
   --background-soft-transparent: rgba(240, 240, 240, 0.3);
   --background-muted: #dedede;
   --background-muted-tr: rgba(238, 238, 238, 0.9);
@@ -222,22 +223,11 @@ nav uli li.active {
   list-style-type: none;
 }
 
-nav ul li.heading-link {
-  color: var(--secondary-color);
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  text-align: left;
-  margin-left: 0;
-  margin-right: 0;
-}
 
-.first,
-.first.active,
-.first:focus {
+.first  {
   color: var(--text);
   background: transparent;
-  font-weight: 400;
+  font-weight: 700;
   vertical-align: bottom;
   display: flex;
   position: relative;
@@ -256,10 +246,11 @@ nav ul li.heading-link {
 }
 
 .first.active,
+.first:focus,
 .first:hover {
-  color: var(--secondary-color-link);
   font-weight: 700;
-  backdrop-filter: blur(5px) ;
+  color: var(--secondary-color);
+   backdrop-filter: blur(5px);
 }
 
 .burger-menu {
@@ -314,13 +305,13 @@ nav ul li.heading-link {
 }
 
 .welcome.homepage {
-  background: linear-gradient(
+ background: linear-gradient(
   to bottom,
   var(--background-soft) 0%,
-  var(--background-soft) 50%,
-  var(--secondary-color-darkest) 100%
-);
-  /* background: url(img/AdobeStock_326769934_Video_HD_Preview.mov); */
+  var(--background-soft) 75%,
+  var(--background-soft-full) 100%
+),
+  url(img/computer.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -330,17 +321,16 @@ nav ul li.heading-link {
   color: var(--text);
 }
 
-.welcome.welcome.homepage i.arrow-down{
+welcome.homepage i.arrow-down{
   color: var(--text);
 }
 
 .welcome.about {
-  background: 
-    linear-gradient(
-  to bottom,
-      var(--shadows) 0%,
-      var(--shadows) 100%,
-      var(--background-muted) 100%
+  background: linear-gradient(
+    to bottom,
+    var(--shadows) 0%,
+    var(--shadows) 75%,
+    #2c2c2c 100%
 ),
   url(img/aboutm1.webp);
     background-size: cover;
@@ -349,17 +339,29 @@ nav ul li.heading-link {
 }
 
 .welcome.projects {
-  background: url(img/art.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background: linear-gradient(
+    to bottom,
+    var(--shadows) 0%,
+    var(--shadows) 75%,
+    #2c2c2c 100%
+),
+  url(img/art.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .welcome.contact {
-  background: url(img/kontakty.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center left;
+    background: linear-gradient(
+      to bottom,
+      var(--shadows) 0%,
+      var(--shadows) 75%,
+      #2c2c2c 100%
+),
+  url(img/kontakty.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
 }
 
 .welcome.error-page {
@@ -434,9 +436,13 @@ a.btn.cv:hover {
   border-color: var(--btn-border);
 }
 
+a.rezervace {
+  text-align: center;
+}
+
 .welcome a i.arrow-down:hover {
   transform: scale(1.15);
-  color: white;
+  color: var(--heading-color);
 }
 
 .move-down {
@@ -546,6 +552,18 @@ section.reservation {
 
 section.reservation a {
   margin-bottom: 0;
+}
+
+section.contact-box {
+  /* max-width: 950px; */
+  /* margin: 0% auto; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0px;
+  background: transparent;
+  backdrop-filter: none;
 }
 
 
@@ -1873,6 +1891,10 @@ nav uli li.active {
   .col3 {
     flex-wrap: wrap;
   }
+
+  section.contact-box {
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1941,15 +1963,6 @@ nav uli li.active {
     padding: 0.545rem 0;
     margin-left: 4.36rem;
     font-size: clamp(1.6rem, 2rem + 0.1vw, 2.3rem);
-  }
-
-  .menu-background nav ul li.heading-link.first {
-    display: none;
-    width: 100%;
-    letter-spacing: 1px;
-    margin: 1.09rem 1.09rem 0.273rem 4.36rem;
-    text-decoration: underline;
-    text-decoration-color: var(--secondary-color);
   }
   
   .first:not(.album) {

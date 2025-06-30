@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://alena-pumprova.cz/</loc>
+  <lastmod>2025-06-30T12:40:59+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://alena-pumprova.cz/o-mne.html</loc>
+  <lastmod>2025-06-30T11:51:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://alena-pumprova.cz/projekty.html</loc>
+  <lastmod>2025-06-30T11:52:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://alena-pumprova.cz/kontakt.php</loc>
+  <lastmod>2025-06-30T18:31:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://alena-pumprova.cz/AlenaPumprovaResume.pdf</loc>
+  <lastmod>2025-06-30T11:48:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://alena-pumprova.cz/projects/nu-pogodi/</loc>
+  <lastmod>2025-02-07T18:55:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>

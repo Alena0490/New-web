@@ -38,7 +38,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css?v143">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap">
     
     <meta name="theme-color" content="#A855F7">
@@ -60,18 +60,18 @@
 
             </div>
             <div class="menu-background">
-                <a class="logo-wrap" href="/index.html" target="_blank" title="Alena Pumprová">
-                    <img src="img/logo.webP" alt="Logo Alena Pumprová" id="logo">
+                <a class="logo-wrap" href="/index/" target="_blank" title="Alena Pumprová">
+                    <img src="/img/logo.webP" alt="Logo Alena Pumprová" id="logo">
                 </a>
                 <nav>
                     <ul id="navMenu">
-                        <li><a class="first" href="index.html" title="Přejít na hlavní stránku">Hlavní stránka</a></li>
-                        <li><a class="first" href="o-mne.html" title="Přejít na stránku O mně">O mně</a></li>
-                        <li><a class="first" href="projekty.html" title="Přejít na stránku Projekty">Projekty</a></li>
-                        <li><a class="first active" href="kontakt.html" title="Přejít na stránku Kontakt">Kontakt</a></li>
+                        <li><a class="first" href="/index/" title="Přejít na hlavní stránku">Hlavní stránka</a></li>
+                        <li><a class="first" href="/o-mne/" title="Přejít na stránku O mně">O mně</a></li>
+                        <li><a class="first" href="/projekty/" title="Přejít na stránku Projekty">Projekty</a></li>
+                        <li><a class="first active" href="/kontakt/" title="Přejít na stránku Kontakt">Kontakt</a></li>
                     </ul>
                     <div class="mobile-nav-back"></div>
-                    <a class="mobile-nav-icon" aria-label="menu" href="#" title="Otevřít burger menu"><img class="burger-menu jq--nav-icon" src="img/burger-barw.png" alt="Hamburger menu"></a>
+                    <a class="mobile-nav-icon" aria-label="menu" href="#" title="Otevřít burger menu"><img class="burger-menu jq--nav-icon" src="/img/burger-barw.png" alt="Hamburger menu"></a>
 
                 </nav>
             </div>
@@ -89,7 +89,7 @@
             <main>
                     <h2 class="contact-box scroll-end">Jak se se&nbsp;mnou spojit</h2>
                     <p>Máte otázky nebo mi chcete něco sdělit? Neváhejte mě kontaktovat přes&nbsp;<strong>e-mail</strong>, <strong>telefon</strong> nebo pomocí <a href="#" class="jq--scroll-form basic">formuláře</a> níže. Ráda vám odpovím!</p>
-    <br></p>
+    <br>
                     <br>
                 
                 <ul class="contacts">
@@ -115,7 +115,7 @@
 
                         <div class="col map-container lb">
                             <a href="https://www.google.com/maps/place/Sokolovna+L%C3%A1zn%C4%9B+B%C4%9Blohrad/@50.4292988,15.584839,17z/data=!4m6!3m5!1s0x470e9984eca1dbcf:0xd5d4f17f88d01fff!8m2!3d50.4292988!4d15.5874139!16s%2Fg%2F11dym5rbqq?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" title="Mapa Lázně Bělohrad">
-                                <img class="map map-image" src="img/mapa.webp" alt="Mapa - Lázně Bělohrad Lázeňská 295" width="800" height="500" loading="lazy">
+                                <img class="map map-image" src="/img/mapa.webp" alt="Mapa - Lázně Bělohrad Lázeňská 295" width="800" height="500" loading="lazy">
                             </a>
                         </div>
                     </section> 
@@ -125,16 +125,13 @@
                     <p>Chcete mi něco vzkázat, zeptat se na podrobnosti toho, co dělám, nebo mi jen sdělit svůj názor? Stačí vyplnit formulář níže a já se vám co nejdříve ozvu</p>
 <p><strong>Budu se těšit na vaši zprávu!</strong></p>
 
-                
-    <!-- <div class="form-result success">Odeslání proběhlo úspěšně</div>
-    <div class="form-result error">Odeslání selhalo. Zkus to prosím znovu.</div> -->
 
     <?php
 if (isset($_GET['success'])) {
     if ($_GET['success'] === "1") {
         echo '<div class="form-result success">Odeslání proběhlo úspěšně</div>';
     } elseif ($_GET['success'] === "-1") {
-        echo '<div class="form-result error">Odeslání selhalo. Zkus to prosím znovu.</div>';
+        echo '<div class="form-result error">Odeslání selhalo. Zkuste to prosím znovu.</div>';
     }
 }
 ?>
@@ -199,7 +196,7 @@ if (isset($_GET['success'])) {
             <button id="accept-cookies">Souhlasím</button>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
-        <script src="script.js" defer></script>
+        <script src="/script.js" defer></script>
             <script type="application/ld+json">
 {
     "@context": "https://schema.org",

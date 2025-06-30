@@ -112,8 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Přepni obrázek burger ↔ close
             const currentSrc = burgerIcon.getAttribute('src');
-            const isBurger = currentSrc.includes('burger-barw.png');
-            burgerIcon.setAttribute('src', isBurger ? 'img/closew.png' : 'img/burger-barw.png');
+            const isBurger = currentSrc.includes('/img/burger-barw.png');
+            burgerIcon.setAttribute('src', isBurger ? '/img/closew.png' : '/img/burger-barw.png');
 
             // Přepni třídu .nav
             navMenu.classList.toggle('nav');
