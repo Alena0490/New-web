@@ -1,4 +1,20 @@
+/***Stažení CV */
+document.addEventListener("DOMContentLoaded", function() {
+  const cvLinks = document.querySelectorAll('a.track-cv-download');
 
+  cvLinks.forEach(link => {
+    link.addEventListener("click", function() {
+      if (typeof gtag === "function") {
+        gtag('event', 'download_cv', {
+          'event_category': 'Downloads',
+          'event_label': link.getAttribute('href')
+        });
+      }
+    });
+  });
+});
+
+   
   /***Přepnutí na Light/Dark mode */
   document.addEventListener("DOMContentLoaded", () => {
     const toggleInput = document.querySelector(".theme-toggle input");
@@ -112,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Přepni obrázek burger ↔ close
             const currentSrc = burgerIcon.getAttribute('src');
-            const isBurger = currentSrc.includes('/img/burger-barw.png');
+            const isBurger = currentSrc.endsWith('/img/burger-barw.png');
             burgerIcon.setAttribute('src', isBurger ? '/img/closew.png' : '/img/burger-barw.png');
 
             // Přepni třídu .nav
@@ -124,7 +140,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+/**Zobrazení galerie*/
+  document.addEventListener("DOMContentLoaded", () => {
+  const fadeIn = (el, duration) => {
+    el.style.opacity = 0;
+    el.style.transition = `opacity ${duration}ms`;
+    requestAnimationFrame(() => el.style.opacity = 1);
+  };
 
+  const sliderWrapper = document.querySelector(".slider-wrapper");
+  if (sliderWrapper) fadeIn(sliderWrapper, 3000);
+
+  document.querySelectorAll(".album").forEach(el => fadeIn(el, 4000));
+  document.querySelectorAll("iframe").forEach(el => fadeIn(el, 4000));
+});
 
   /****Slider animace */
   document.addEventListener("DOMContentLoaded", () => {
@@ -163,17 +192,49 @@ document.addEventListener("DOMContentLoaded", function () {
     let autoResume;
   });
   
-/**Zobrazení galerie*/
-  $(function() {
-    $(".slider-wrapper").hide().fadeIn(3000);
-});
+/***Swipe */
+  (function() {
+  const slider = document.querySelector('.sliderhome');
+  if (!slider) return;
+  const radios = Array.from(slider.querySelectorAll('input[name="r"]'));
+  const bars = document.querySelectorAll('.bar');
+  let current = radios.findIndex(input => input.checked);
+  const total = radios.length;
+  let startX = 0;
+  let endX = 0;
 
-  $(function() {
-    $(".album").hide().fadeIn(4000);
-});
-  $(function() {
-    $("iframe").hide().fadeIn(4000);
-});
+  const updateSlider = (index) => {
+    radios[index].checked = true;
+    bars.forEach(bar => bar.classList.remove('active'));
+    if (bars[index]) bars[index].classList.add('active');
+    current = index;
+  };
+
+  slider.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener('touchend', e => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const threshold = 30;
+    const deltaX = endX - startX;
+
+    if (Math.abs(deltaX) > threshold) {
+      if (deltaX > 0) {
+        // swipe doprava
+        current = (current - 1 + total) % total;
+      } else {
+        // swipe doleva
+        current = (current + 1) % total;
+      }
+      updateSlider(current);
+    }
+  }
+})();
 
 /***Cookies*/
 document.addEventListener("DOMContentLoaded", function() {
