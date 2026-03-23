@@ -301,6 +301,18 @@ nav ul li:first-of-type {
   z-index: 799;
 }
 
+button.mobile-nav-icon {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+button.mobile-nav-icon:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 4px;
+}
+
 .logo-wrap {
   position: absolute;
   left: 0%;
@@ -523,6 +535,7 @@ a.btn::after {
 a.btn:hover::after {
   background-color: var(--btn-background);
   padding: 0;
+  will-change: auto;
 }
 
 a.btn:hover::before {
@@ -662,14 +675,14 @@ section.visit {
   z-index: 200;
 }
 
-section.reservation {
+section.tech-stack {
   border: none;
   background: none;
   backdrop-filter: none;
   padding: 0;
 }
 
-section.reservation a {
+section.tech-stack a {
   margin-bottom: 0;
 }
 
@@ -722,10 +735,14 @@ h2.scroll-end {
 
 h3 {
   max-width: 900px;
-  margin: 0% auto;
+  margin: 1rem auto 0;
   font-size: clamp(1rem, 3vw, 1.266rem);
   text-align: left;
   color: var(--text-strong);
+}
+
+h3.left {
+  margin: 1rem 0 0;
 }
 
 h4 {
@@ -743,7 +760,7 @@ h4 ul {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 3.636rem;
+  gap: 2.16rem;
   margin-bottom: 1.09rem;
 }
 
@@ -776,6 +793,10 @@ p {
 p.address {
   max-width: none;
   text-align: left;
+}
+
+p.unset {
+  margin-left: 0;
 }
 
 strong {
@@ -901,7 +922,7 @@ ul:not(nav ul) {
   position: relative;
   width: 20%;
   transition: all 0.5s ease-out;
-  max-height: 90vh;
+  max-height: 85vh;
 }
 
 .slide img,
@@ -997,6 +1018,11 @@ input[name=r] {
   filter: brightness(1.2);
 }
 
+.lang svg {
+  margin-right: 0.25em;
+  vertical-align: -0.125em;
+}
+
 .lang.html {
   background: linear-gradient(#f78956, #cc421b);
 
@@ -1009,6 +1035,11 @@ input[name=r] {
 
 .lang.javascript {
   background: linear-gradient(#f0db4f, #9e8e25);
+}
+
+.lang.typescript {
+  color: var(--heading-color);
+  background: linear-gradient(#5671f7, #273b94);
 
 }
 
@@ -1030,6 +1061,10 @@ input[name=r] {
 
 .lang.firebase {
   background: linear-gradient(#ffcb00, #ff7c00);
+}
+
+.lang.figma {
+  background: linear-gradient(#fcfcfb, #7c7c7c);
 }
 
 .lang span {
@@ -1348,6 +1383,7 @@ input[type=submit]:active {
     z-index: -2;
     animation: 5.5s spin linear infinite;
     opacity: 0.6;
+    will-change: transform;
 }
 
 .project-wrap::after {
@@ -1365,6 +1401,7 @@ input[type=submit]:active {
     z-index: -3;
     animation: 5.5s spin linear infinite;
     opacity: 0.4;
+    will-change: transform;
 }
 
 .project-wrap:hover {
@@ -1375,6 +1412,7 @@ input[type=submit]:active {
 .project-wrap:hover::after,
 .project-wrap:hover::before {
   animation:  none;
+  will-change: auto;
 }
 
 .project-description {
@@ -1398,6 +1436,15 @@ input[type=submit]:active {
 
 .technologies .lang-logo:hover {
   filter: brightness(1.02);
+  transform: scale(1.1);
+}
+
+.three {
+  filter: invert(1)
+}
+
+.technologies .lang-logo.three {
+  filter: invert(1);
   transform: scale(1.1);
 }
 

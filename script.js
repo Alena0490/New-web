@@ -116,27 +116,73 @@ document.addEventListener('DOMContentLoaded', function () {
   
 
 /*** Change Hamburger to Cross vice versa */
+/*** Burger menu s ARIA podporou */
 document.addEventListener("DOMContentLoaded", function () {
-    const burgerIcon = document.querySelector('.jq--nav-icon');
+    const burgerButton = document.querySelector('.mobile-nav-icon');
     const navMenu = document.getElementById('navMenu');
 
-    console.log("JS načten. burgerIcon:", burgerIcon, "| navMenu:", navMenu);
-
-    if (burgerIcon && navMenu) {
-        burgerIcon.addEventListener('click', function (event) {
+    if (burgerButton && navMenu) {
+        // Nastavit výchozí ARIA atributy
+        burgerButton.setAttribute('aria-expanded', 'false');
+        
+        burgerButton.addEventListener('click', function (event) {
             event.preventDefault();
 
-            // Přepni obrázek burger ↔ close
-            const currentSrc = burgerIcon.getAttribute('src');
-            const isBurger = currentSrc.endsWith('/img/burger-barw.png');
-            burgerIcon.setAttribute('src', isBurger ? '/img/closew.png' : '/img/burger-barw.png');
+            // Zjistit současný stav
+            const isExpanded = burgerButton.getAttribute('aria-expanded') === 'true';
+            
+            // Změna ikony burger ↔ close
+            const burgerImg = burgerButton.querySelector('.burger-menu');
+            if (burgerImg) {
+                const currentSrc = burgerImg.getAttribute('src');
+                const isBurger = currentSrc.endsWith('/img/burger-barw.png');
+                burgerImg.setAttribute('src', isBurger ? '/img/closew.png' : '/img/burger-barw.png');
+            }
 
-            // Přepni třídu .nav
+            // Toggle menu
             navMenu.classList.toggle('nav');
-            console.log("Klik - aktuální třídy na <ul>:", navMenu.className);
+            
+            // Aktualizovat ARIA atributy
+            burgerButton.setAttribute('aria-expanded', !isExpanded);
+            burgerButton.setAttribute('aria-label', 
+                isExpanded ? 'Otevřít navigační menu' : 'Zavřít navigační menu'
+            );
         });
-    } else {
-        console.warn("burgerIcon nebo navMenu nenalezen!");
+
+        // Zavřít menu při kliku mimo
+        document.addEventListener('click', function(event) {
+            const isClickInside = burgerButton.contains(event.target) || navMenu.contains(event.target);
+            const isExpanded = burgerButton.getAttribute('aria-expanded') === 'true';
+            
+            if (!isClickInside && isExpanded) {
+                navMenu.classList.remove('nav');
+                burgerButton.setAttribute('aria-expanded', 'false');
+                burgerButton.setAttribute('aria-label', 'Otevřít navigační menu');
+                
+                const burgerImg = burgerButton.querySelector('.burger-menu');
+                if (burgerImg) {
+                    burgerImg.setAttribute('src', '/img/burger-barw.png');
+                }
+            }
+        });
+
+        // Zavřít menu klávesou Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const isExpanded = burgerButton.getAttribute('aria-expanded') === 'true';
+                
+                if (isExpanded) {
+                    navMenu.classList.remove('nav');
+                    burgerButton.setAttribute('aria-expanded', 'false');
+                    burgerButton.setAttribute('aria-label', 'Otevřít navigační menu');
+                    
+                    const burgerImg = burgerButton.querySelector('.burger-menu');
+                    if (burgerImg) {
+                        burgerImg.setAttribute('src', '/img/burger-barw.png');
+                    }
+                }
+            }
+        });
     }
 });
 

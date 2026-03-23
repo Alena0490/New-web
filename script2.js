@@ -6,15 +6,12 @@
     const setTheme = (isLight) => {
       document.documentElement.classList.toggle("dark", !isLight);
       toggleInput.checked = isLight;
-      console.log("Switched to", isLight ? "Light" : "Dark", "mode");
     };
   
     // Výchozí: tmavý, pokud není výslovně "light"
     if (userTheme === "light") {
-      console.log("Light mode set");
       setTheme(true);
     } else {
-      console.log("Dark mode set (default or explicitly)");
       setTheme(false);
     }
   
@@ -22,7 +19,6 @@
       const isLight = toggleInput.checked;
       setTheme(isLight);
       localStorage.setItem("theme", isLight ? "light" : "dark");
-      console.log("Theme switched to:", isLight ? "light" : "dark");
     });
   });
 
