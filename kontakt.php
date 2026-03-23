@@ -377,6 +377,7 @@
                 </form>        
             </main>
         </div>
+
         <footer>
             <div class="ff">
                 <div class="foot">
@@ -385,9 +386,22 @@
                         href="https://www.linkedin.com/in/alena-pumprov%C3%A1-274234107/" 
                         target="_blank" 
                         title="LinkedIn Alena Pumprová"
+                        rel="noopener"
                     >  
                     <span class="fa-brands fa-linkedin"></span>
                         LinkedIn
+                        <span class="sr-only">(otevře se v novém okně)</span>
+                    </a>
+
+                    <a 
+                        class="fb-logo" 
+                        href="https://www.facebook.com/alena.pumprova/"
+                        target="_blank" 
+                        title="Facebook Alena Pumprová"
+                        rel="noopener"
+                    >
+                        <span class="fa-brands fa-square-facebook"></span>
+                        Facebook
                         <span class="sr-only">(otevře se v novém okně)</span>
                     </a>
                     
@@ -396,6 +410,7 @@
                         href="https://www.instagram.com/alena.pumprova/" 
                         target="_blank" 
                         title="Instagram Alena Pumprová"
+                        rel="noopener"
                     >
                         <span class="fa-brands fa-square-instagram"></span>
                         Instagram
@@ -406,6 +421,7 @@
                         href="https://github.com/Alena0490" 
                         target="_blank" 
                         title="GitHub Alena Pumprová"
+                        rel="noopener"
                     >
                         <span class="fa-brands fa-square-github"></span>
                         GitHub
@@ -426,10 +442,9 @@
             </p>
             <div class="buttons">
                 <a 
-                    href="/zasady_ochrany_osobnich_udaju.pdf" 
+                    href="/zasady-ochrany-osobnich-udaju-cookies" 
                     id="info" 
                     target="_blank" 
-                    type="application/pdf"
                 >  
                     Více informací
                     <span class="sr-only">(otevře se v novém okně)</span>

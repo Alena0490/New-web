@@ -7,14 +7,14 @@
   --secondary-color: #A855F7;
   --secondary-color-transparent: #A855F770;
   --secondary-color-light:#b977f8;
-  --secondary-color-link: #609031;
+  --secondary-color-link: #388321;
   --secondary-color-link-hover: #7ebd3f;
   --secondary-color-darkest: #753bac;
   --secondary-color-gradient: #a855f720;
 
   --hr-color: #dfdfff;
 
-  --background: #f5f5f580;
+  --background: #f5f5f58b;
   --background-soft: rgba(255, 255, 255, 0.63);
   --background-soft-full: rgba(240, 240, 240);
   --background-soft-transparent: rgba(240, 240, 240, 0.3);
@@ -58,7 +58,7 @@ html.dark {
   --secondary-color: #A855F7;
   --secondary-color-transparent:  rgba(168, 85, 247, 0.3);;
   --secondary-color-light: #b977f8;
-  --secondary-color-link: #a7f755;
+  --secondary-color-link: #aaff56;
   --secondary-color-link-hover:#c9ff93;
   --secondary-color-darkest: #753bac;
   --secondary-color-gradient: rgba(168, 85, 247, 0.2);
@@ -434,6 +434,19 @@ button.mobile-nav-icon:focus-visible {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center left;
+}
+
+.welcome.cookies {
+  background: linear-gradient(
+    to bottom,
+    var(--shadows) 0%,
+    var(--shadows) 75%,
+    #2c2c2c 100%
+),
+  url(img/law1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
 }
 
 .welcome::after {
@@ -2137,6 +2150,10 @@ Other */
   opacity: 1;
 }
 
+.cookie-top {
+  margin-top: 1.09rem;
+}
+
 /*Grid*/
 .section {
   padding: 0;
@@ -2335,6 +2352,19 @@ nav ul li:first-of-type {
   url(img/hidden-kitty.webp);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.welcome.cookies {
+  background: linear-gradient(
+    to bottom,
+    var(--shadows) 0%,
+    var(--shadows) 75%,
+    #2c2c2c 100%
+),
+  url(img/law2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
 }
  
   .menu-background {
@@ -2735,13 +2765,33 @@ nav ul li:first-of-type {
     margin-left: 1.09rem;
   }
 
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   footer .copyright,
   footer .fb-logo {
     font-size: clamp(0.6rem, 0.8rem + 0.1vw, 1rem);
   }
+
+  .foot {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.273rem;
+    margin: 0.545rem auto;
+    justify-content: space-between;
+  }
+
   .fb-logo span,
   .fb-logo svg {
     font-size: clamp(1.1rem, 1.4rem + 0.1vw, 1.6rem);
+  }
+
+  .copyright {
+    margin-block: 0.545rem;
+    text-align: left;
   }
 }
 
