@@ -367,8 +367,9 @@ button.mobile-nav-icon:focus-visible {
   color: var(--text-muted);
 }
 
-.welcome.homepage a span.arrow-down{
+.welcome.homepage a svg.arrow-down{
   color: var(--text-muted);
+  font-size: 3.5rem;
 }
 
 .welcome.homepage a.move-down img {
@@ -379,8 +380,8 @@ button.mobile-nav-icon:focus-visible {
   bottom: 1.09rem;
 }
 
-.welcome.homepage a span.arrow-down:hover,
-.welcome.homepage a span.arrow-down:active {
+.welcome.homepage a svg.arrow-down:hover,
+.welcome.homepage a svg.arrow-down:active {
   color: var(--text);
 }
 
@@ -575,12 +576,16 @@ a.btn.cv:active {
   border-color: var(--btn-border);
 }
 
-a.rezervace {
+a.error-home {
   text-align: center;
+  display: inline-flex;
+  gap: 0.545rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.welcome a span.arrow-down:hover,
-.welcome a span.arrow-down:active {
+.welcome a svg.arrow-down:hover,
+.welcome a svg.arrow-down:active {
   transform: scale(1.15);
   color: var(--heading-color);
 }
@@ -592,11 +597,11 @@ a.rezervace {
   z-index: 5;
 }
 
-.welcome a span.arrow-down {
+.welcome a svg.arrow-down {
   position: absolute;
   bottom: 1.09rem;
   color: var(--heading-color);
-  font-size: clamp(2rem, 2.5rem + 0.1vw, 2.8rem);
+  font-size: clamp(2.8rem, 3.5rem + 0.1vw, 4rem);
   transition: all 0.4s ease-out;
   cursor: pointer;
   z-index: 5;
@@ -895,8 +900,8 @@ ul:not(nav ul) {
   color: var(--text);
   margin-right: 0.273rem;
   font-size: clamp(0.85rem, 3vw, 1rem);
-  width: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
-  height: auto;
+  /* width: clamp(0.85rem, 1rem + 0.1vw, 1.1rem);
+  height: auto; */
   vertical-align:bottom;
   margin-right: 0.364rem;
 }
@@ -2285,6 +2290,10 @@ nav ul li:first-of-type {
 
 @media only screen and (max-width: 768px) {
 
+  .body {
+    background: url(img/mountains-mobile.webp) repeat-y;
+  }
+
   #logo {
     top: 0.3rem;
     max-width: 140px;
@@ -2914,7 +2923,7 @@ header span,
   font-size: 1.4rem;
   color: var(--heading-color);
   margin-right: 0.273rem;
-  bottom: 2px;
+  bottom: 0px;
 }
 
 header span.sun,
@@ -2926,8 +2935,8 @@ header svg.sun {
 header span.moon,
 header svg.moon {
   position: absolute;
-  bottom: -0.5px;
-  left: 0.636rem;
+  bottom: -1px;
+  left: 0.07rem;
   font-size: 1.55rem;
   z-index: -700;
 }
