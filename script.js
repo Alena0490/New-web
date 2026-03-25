@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
-
-   
+  
   /***Přepnutí na Light/Dark mode */
   document.addEventListener("DOMContentLoaded", () => {
     const toggleInput = document.querySelector(".theme-toggle input");
@@ -83,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
           e.preventDefault();
   
           const yOffset = -90;
-          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          const y = target.getBoundingClientRect().top + window.window.scrollY + yOffset;
   
           window.scrollTo({
             top: y,
@@ -103,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const target = document.querySelector(hash);
         if (target) {
           const offset = -90; // posun kvůli fixnímu headeru
-          const top = target.getBoundingClientRect().top + window.pageYOffset + offset;
+          const top = target.getBoundingClientRect().top + window.window.scrollY + offset;
   
           window.scrollTo({
             top: top,
@@ -111,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
           });
         }
       }
-    }, 200); // delay = klíčová část!
+    }, 200); // delay
   });
   
 
@@ -307,35 +306,10 @@ if (!motionQuery.matches) {
   // Jen pokud není omezený pohyb, přidej efekt
   window.addEventListener("scroll", function () {
     const parallaxElements = document.querySelectorAll(".parallax");
-    const offset = window.pageYOffset;
+    const offset = window.window.scrollY;
 
     parallaxElements.forEach((parallaxImage) => {
       parallaxImage.style.transform = `translateY(${offset * -0.017}px)`;
     });
   });
 }
-
-
-/*** Automatický text***/
-// if (window.matchMedia("(min-width: 351px)").matches) {
-//   const heading = document.querySelector(".introduction");
-//   if (heading) {
-//     const text = "„Jsem začínající front-end vývojářka, která ráda zkouší nové věci a posouvá svoje hranice.“";
-//     let idLetter = 1;
-//     let delay = 100;
-
-//     function printText() {
-//       heading.innerText = text.slice(0, idLetter);
-//       idLetter++;
-
-//       setTimeout(printText, delay);
-
-//       if (idLetter > text.length) {
-//         idLetter = 1;
-//       }
-//     }
-
-//     printText();
-//   }
-// }
-
