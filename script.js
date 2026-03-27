@@ -200,6 +200,21 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("iframe").forEach(el => fadeIn(el, 4000));
 });
 
+
+  /****Slider nevigase - focus */
+  document.querySelectorAll('.bar').forEach(label => {
+  label.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const forAttr = label.getAttribute('for');
+      const input = document.getElementById(forAttr);
+      if (input) {
+        input.checked = true;
+      }
+    }
+  });
+});
+
   /****Slider animace */
   document.addEventListener("DOMContentLoaded", () => {
     const radios = document.querySelectorAll('input[name="r"]');
