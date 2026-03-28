@@ -92,6 +92,17 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
+
+    /* Scrolování po odeslání formuláře */
+  document.addEventListener("DOMContentLoaded", function() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('success')) {
+        const formResult = document.querySelector('.form-result');
+        if (formResult) {
+            formResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+  });
   
   /*Scrolování k adrese*/
   document.addEventListener("DOMContentLoaded", () => {

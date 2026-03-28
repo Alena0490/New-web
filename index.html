@@ -20,7 +20,7 @@
         <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
         <link rel="manifest" href="img/site.webmanifest">
 
-        <link rel="preload" as="image" href="/img/computer.webp" type="image/webp">
+        <link rel="preload" as="image" href="/img/computer.webp" type="image/webp" fetchpriority="high">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -146,8 +146,8 @@
                         <li>
                             <a 
                                 class="first" 
-                                href="kontakt/" title="
-                                Přejít na stránku Kontakt"
+                                href="kontakt/" 
+                                title="Přejít na stránku Kontakt"
                             >
                                 Kontakt
                             </a>
@@ -203,7 +203,9 @@
             <a 
                 href="#" 
                 class="move-down scroll-start" 
-                aria-label="scroll down to header" title="Přejít k obsahu" role="button"
+                aria-label="scroll down to header" 
+                title="Přejít k obsahu" 
+                role="button"
             >
                 <svg 
                     class="arrow-down"

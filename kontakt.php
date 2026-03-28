@@ -35,8 +35,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="/img/kontakty.webp" type="image/webp">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap&subset=latin,latin-ext" rel="stylesheet">
+    <link rel="preload" as="image" href="/img/kontakty.webp" type="image/webp" fetchpriority="high">
     <link rel="stylesheet" href="/style.css?v257">
     
     <meta name="theme-color" content="#A855F7">
@@ -604,10 +604,6 @@
                 </button>
             </div>
         </div> 
-        <script 
-            src="https://code.jquery.com/jquery-3.6.4.min.js" 
-            defer
-        ></script>
         <script src="/script.js" defer></script>
         <script type="application/ld+json">
         {
