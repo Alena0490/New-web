@@ -3,11 +3,11 @@
     <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1SGGK66MS"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-W1SGGK66MS');
+        gtag('config', 'G-W1SGGK66MS');
     </script>
 
     <title>Kontakt | Alena Pumprová – front-end developer</title>
@@ -42,26 +42,25 @@
     <meta name="theme-color" content="#A855F7">
     <meta name="color-scheme" content="light dark">
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Alena Pumprová",
-  "url": "https://www.alena-pumprova.cz",
-  "image": "https://www.alena-pumprova.cz/img/logo.webp",
-  "sameAs": [
-    "https://www.linkedin.com/in/alena-pumprov%C3%A1-274234107/",
-    "https://www.instagram.com/alena.pumprova/",
-    "https://github.com/Alena0490"
-  ],
-  "jobTitle": "Front-end vývojářka",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Freelance / Open Source"
-  }
-}
-    </script>
-   
-    <meta name="msvalidate.01" content="95134301066379095FFE8F6C0B44931B">
+    {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alena Pumprová",
+    "url": "https://www.alena-pumprova.cz",
+    "image": "https://www.alena-pumprova.cz/img/logo.webp",
+    "sameAs": [
+        "https://www.linkedin.com/in/alena-pumprov%C3%A1-274234107/",
+        "https://www.instagram.com/alena.pumprova/",
+        "https://github.com/Alena0490"
+    ],
+    "jobTitle": "Front-end vývojářka",
+    "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance / Open Source"
+    }
+    }
+        </script>
+    <meta name="msvalidate.01" content="95134301066379095FFE8F6C0B44931B">    
     </head>
 
     <body>
