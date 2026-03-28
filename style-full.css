@@ -18,7 +18,6 @@
   --background-muted: #dedede;
   --background-muted-tr: rgba(238, 238, 238, 0.9);
   --background-dark-base: #2c2c2c;
-  --backdrop: rgba(255, 255, 255, 0.15);
 
   --text: #2e2e2e;
   --text-muted: #4a4a4a;
@@ -72,8 +71,7 @@
   --text-h3: clamp(1.375rem, 3vw, 1.741rem);        /* h3 */
   --text-h2: clamp(1.719rem, 4vw, 2.203rem);        /* h2 */
   --text-h1: clamp(2.0625rem, 6vw, 2.787rem);       /* h1 */
-  --text-icon: clamp(1.7rem, 2.2rem + 0.1vw, 2.475rem); /* fb-logo ikony */
-  --text-icon-sm: clamp(1.45rem, 1.925rem + 0.1vw, 2.2rem); /* fb-logo ikony malý screen */
+  --text-icon: clamp(1.45rem, 1.925rem + 0.1vw, 2.2rem); /* fb-logo icon */
   --scroll-bar-width: 0.77rem;
   --letter-spacing-base: 1px;
   --fw-bold:    700;
@@ -84,7 +82,6 @@
   --z-content:    10;   /* cookie-banner, theme-toggle */
   --z-navigation: 100;
   --z-overlay:    200;
-  --z-fixed:      300;
   --z-skip:       400;
 }
 
@@ -103,7 +100,6 @@ html.dark {
   --background-soft-full: #252525;
   --background-muted: #2c2c2c;
   --background-muted-tr: rgba(45, 45, 45, 0.9);
-  --backdrop: rgba(40, 60, 40, 0.15);
 
   --text: #eaeaea;
   --text-muted: #b9b9b9;
@@ -1607,7 +1603,7 @@ footer {
 .fb-logo svg {
   margin: 0;
   color: inherit;
-  font-size: var(--text-icon-sm);
+  font-size: var(--text-icon);
 }
 
 #cookie-banner {
