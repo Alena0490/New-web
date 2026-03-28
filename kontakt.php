@@ -216,8 +216,7 @@
                     níže. Ráda vám odpovím!
                 </p>
                 <br>
-                <br>
-                
+
                 <ul class="contacts">
                     <li>
                         <svg 
@@ -283,7 +282,7 @@
                         </strong>
                     </li>
                 </ul> 
-                <hr>
+
                 <section class="visit">
                     
                     <h2 id="lb">
