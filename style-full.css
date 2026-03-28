@@ -625,7 +625,7 @@ section.top {
 }
 
 section.main-text {
-  padding-block: var(--space-xl);
+  padding-block: 0 var(--space-xl);
 }
 
 section.visit {
@@ -644,7 +644,7 @@ section.tech-stack a {
   margin-bottom: 0;
 }
 
-section.contact-box {
+div.contact-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -721,7 +721,7 @@ hr {
   border: none; 
   height: var(--border-thin); 
   background-color: var(--secondary-color-darkest);
-  margin-block: var(--space-lg) var(--space-xl);
+  margin-block: var(--space-lg);
 }
 
 .aside-text {
@@ -1538,6 +1538,10 @@ img.game-pic:hover {
   transform: scale(1.02);
 }
 
+img.game-pic.last {
+    margin-bottom: var(--space-xxl);
+}
+
 .col ul {
   margin: var(--space-lg) auto 0 auto;
   font-style: normal;
@@ -1767,7 +1771,7 @@ footer {
     margin-left: 10%;
   }
 
-  section.contact-box {
+  div.contact-box {
     justify-content: center;
   }
 }

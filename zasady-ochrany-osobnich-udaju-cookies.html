@@ -14,6 +14,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preload" as="image" href="/img/law1.webp" type="image/webp">
         <link rel="stylesheet" href="/style.css">
         <title>Zásady cookies a ochrana osobních údajů | Alena Pumprová</title>
         <meta name="description" content="Informace o zpracování osobních údajů a používání cookies na webu AlenaPumprova.cz.">
@@ -52,7 +53,7 @@
         <a href="#main-content" class="skip-link">Přeskočit na hlavní obsah</a>
         <header>
             <div class="toggle-wrapper">
-                <label class="theme-toggle" aria-label="Přepínání světlého a tmavého režimu">
+                <label class="theme-toggle">
                     <svg 
                         class="moon"
                         fill="currentColor" 
@@ -64,7 +65,11 @@
                     >
                         <path d="M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/>
                     </svg>
-                    <input type="checkbox" id="modeToggle">
+                    <input 
+                        type="checkbox" 
+                        id="modeToggle"
+                        aria-label="Přepínání světlého a tmavého režimu"
+                    >
                     <span class="slider"></span>
                     <svg 
                         class="sun"
@@ -143,7 +148,6 @@
                         role="button"
                         aria-expanded="false" 
                         aria-controls="navMenu"
-                        type="button"
                     >
                         <img 
                             class="burger-menu jq--nav-icon" 
@@ -198,7 +202,7 @@
                     <h3>3. Jak cookies spravovat</h3>
                     <p>Cookies můžete kdykoli smazat nebo blokovat v&nbsp;nastavení vašeho prohlížeče. Upozorňujeme, že zablokování cookies může ovlivnit funkčnost webu.</p>
                 </section>
-                <hr class="hidden">
+                <hr>
                 <section>
                     <h2>Část II. - Ochrana osobních údajů (GDPR)</h2>
 
@@ -265,7 +269,7 @@
                     <p><strong>Tyto podmínky jsou platné a&nbsp;účinné od&nbsp;1.&nbsp;7.&nbsp;2025.</strong></p>
                 </section>
 
-                <hr class="hidden">
+                <hr>
             </main>
         </div>
 

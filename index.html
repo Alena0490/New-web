@@ -67,7 +67,7 @@
         <a href="#main-content" class="skip-link">Přeskočit na hlavní obsah</a>           
         <header>
             <div class="toggle-wrapper">
-                <label class="theme-toggle" aria-label="Přepínání světlého a tmavého režimu">
+                <label class="theme-toggle">
                     <svg 
                         class="moon"
                         fill="currentColor" 
@@ -79,7 +79,11 @@
                     >
                         <path d="M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/>
                     </svg>
-                    <input type="checkbox" id="modeToggle">
+                    <input 
+                        type="checkbox" 
+                        id="modeToggle"
+                        aria-label="Přepínání světlého a tmavého režimu"
+                    >
                     <span class="slider"></span>
                     <svg 
                         class="sun"
@@ -157,7 +161,8 @@
                         title="Otevřít burger menu" 
                         role="button"
                         aria-expanded="false" 
-                        aria-controls="navMenu">
+                        aria-controls="navMenu"
+                    >
                         <img 
                             class="burger-menu jq--nav-icon" 
                             src="/img/burger-barw.png" 
@@ -181,7 +186,7 @@
                 </a>
                 <a 
                     class="btn cv track-cv-download" 
-                    href="Alena Pumprová-CV.pdf" 
+                    href="AlenaPumprova-CV.pdf" 
                     target="_blank" 
                     rel="noopener" 
                     type="application/pdf"
@@ -343,7 +348,7 @@
                                 type="image/webp"
                             >
                             <img 
-                                class="game-pic new-game" 
+                                class="game-pic new-game last" 
                                 src="img/nu-pogodi-screen.webp" 
                                 alt="moderní verze ruské hry Nu pogodi"      
                                 width="802" 
@@ -355,10 +360,10 @@
                 </article> 
            
                 <section class="main-text">
+                    <h2 class="top0">
+                        Od nápadu k realizaci
+                    </h2>
                     <article class="homepage">                  
-                        <h2 class="top0">
-                            Od nápadu k realizaci
-                        </h2>
                             <h3>Jak vznikly moje webové projekty</h3>
                             <p>
                                 Cesta k&nbsp;programování vedla přes&nbsp;marketing a&nbsp;focení, kde jsem získala cit pro&nbsp;design a&nbsp;SEO. Když jsem začala pracovat v&nbsp;IT firmě, bylo rozhodnuto – naučím se kódovat pořádně. Pustila jsem se do&nbsp;HTML a&nbsp;CSS s&nbsp;pomocí tutoriálů od&nbsp;<strong>Davida Šetka</strong> a&nbsp;zdrojů jako 
@@ -524,11 +529,11 @@
                             </div>
                         
                             <div class="navigation r" role="group" aria-label="Navigace mezi slidy">
-                                <label for="r1" class="bar" aria-label="první slide"></label>
-                                <label for="r2" class="bar" aria-label="druhý slide"></label>
-                                <label for="r3" class="bar" aria-label="třetí slide"></label>
-                                <label for="r4" class="bar" aria-label="čtvrtý slide"></label>
-                                <label for="r5" class="bar" aria-label="pátý slide"></label>
+                                <label for="r1" class="bar" title="první slide"></label>
+                                <label for="r2" class="bar" title="druhý slide"></label>
+                                <label for="r3" class="bar" title="třetí slide"></label>
+                                <label for="r4" class="bar" title="čtvrtý slide"></label>
+                                <label for="r5" class="bar" title="pátý slide"></label>
                             </div>
                         </div>
                     </div>
