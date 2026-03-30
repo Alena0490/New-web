@@ -501,7 +501,6 @@ a.btn::after {
 a.btn::before,
 a.btn::after {
     padding: var(--space-sm);
-    animation:  4s spin linear infinite ;
     transition: 
       color var(--transition-base), 
       background-color var(--transition-base), 
@@ -1280,11 +1279,10 @@ form textarea:focus:invalid {
     box-shadow var(--transition-base);
 }
 
-.project-wrap::before,
-.project-wrap::after {
-  padding: 4px;
-  animation: 5.5s spin linear infinite;
-}
+ .project-wrap::before,
+  .project-wrap::after {
+    padding: 4px;
+  }
 
 .project-wrap::before {
     z-index: var(--z-below);
@@ -1487,7 +1485,6 @@ article.hobbies {
 .hobby::before,
 .hobby::after {
   padding: 4px;
-  animation:  5s spin linear infinite ;
 }
 
 .hobby::before {
@@ -1720,6 +1717,17 @@ footer {
 /*Queries*/
 
 @media(prefers-reduced-motion: no-preference){
+  a.btn::before,
+  a.btn::after {
+      animation: 4.5s spin linear infinite;
+  }
+
+  .project-wrap::before,
+  .project-wrap::after,
+  .hobby::before,
+  .hobby::after {
+    animation: 5s spin linear infinite;
+  }
 
   .parallax {
     transform-style: preserve-3d;
@@ -1933,6 +1941,15 @@ footer {
 
   .uvod {
     margin: 0 auto var(--space-xl) auto;
+  }
+
+  .btn::before,
+  a.btn::after,
+  .hobby::before,
+  .hobby::after,
+  .project-wrap::before,
+  .project-wrap::after {
+    animation:  none;
   }
 
   img.image {
