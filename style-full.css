@@ -453,6 +453,7 @@ p.introduction {
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-lg);
+  z-index: var(--z-base);
 }
 
 a.btn {
@@ -504,7 +505,7 @@ a.btn::after {
     transition: 
       color var(--transition-base), 
       background-color var(--transition-base), 
-      border-color var(--transition-base), 
+      border-color var(--transition-base) 
       padding var(--transition-base);
 }
 
@@ -1943,7 +1944,7 @@ footer {
     margin: 0 auto var(--space-xl) auto;
   }
 
-  .btn::before,
+  a.btn::before,
   a.btn::after,
   .hobby::before,
   .hobby::after,
