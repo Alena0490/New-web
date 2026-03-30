@@ -1822,7 +1822,7 @@ footer {
       var(--shadows) 75%,
       var(--background-dark-base) 100%
     ) center / cover no-repeat,
-    url(img/art.webp) center / cover no-repeat;
+    url(img/art1.webp) center / cover no-repeat;
   }
 
   .welcome.contact {
@@ -1832,7 +1832,7 @@ footer {
       var(--shadows) 75%,
       var(--background-dark-base) 100%
     ) center / cover no-repeat,
-    url(img/kontakty.webp) center left / cover no-repeat;
+    url(img/kontakty1.webp) center left / cover no-repeat;
   }
 
   .welcome.error-page {
@@ -1842,7 +1842,7 @@ footer {
       var(--shadows) 75%,
       var(--background-dark-base) 100%
     ) center / cover no-repeat,
-    url(img/hidden-kitty.webp) center / cover no-repeat;
+    url(img/hidden-kitty1.webp) center / cover no-repeat;
   }
 
   .welcome.cookies {
@@ -1985,9 +1985,9 @@ footer {
     padding: 0;
   }
 
-  .welcome.error-page {
+  /* .welcome.error-page {
     background: url(img/hidden-kitty.webp) center -20svh / cover no-repeat;
-  }
+  } */
 
   h1 {
     line-height: 1;
@@ -2163,9 +2163,9 @@ form {
     margin-left: var(--space-xl);
   }
 
-  .welcome.error-page {
+  /* .welcome.error-page {
     background: url(img/hidden-kitty.webp) center -25svh / cover no-repeat;
-  }
+  } */
  
   .introduction {
     margin-block: var(--space-md) var(--space-xl);

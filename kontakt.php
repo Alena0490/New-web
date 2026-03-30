@@ -35,7 +35,9 @@
 
     <link rel="preload" href="roboto-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="roboto-bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" as="image" href="/img/kontakty.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="/img/kontakty1.webp" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="/img/kontakty.webp" media="(min-width: 769px)" fetchpriority="high">
+
     <link rel="stylesheet" href="/style.css?v257">
     
     <meta name="theme-color" content="#A855F7">
