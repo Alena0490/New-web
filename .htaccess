@@ -5,6 +5,15 @@ ErrorDocument 403 /403.html
 # Zapnutí mod_rewrite
 RewriteEngine On
 
+# Výjimka pro načítání fontů bez přidání lomítka na konec URL
+RewriteRule \.(ttf|woff|woff2|eot|otf)$ - [L]
+
+# Přidání lomítka na konec URL (pokud tam není)
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /$1/ [R=301,L]
+
 # Přesměrování z www na non-www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteCond %{REQUEST_URI} !^/mailer.php$ [NC]
@@ -77,5 +86,7 @@ Options -Indexes
     ExpiresByType image/svg+xml "access plus 1 month"
     ExpiresByType text/css "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
-
